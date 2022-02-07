@@ -1,0 +1,77 @@
+.pulse-anim{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #000;
+    margin: 100px auto 0;
+    box-shadow: 0 0 0 0 #000;
+    animation: pulse 1.3s infinite;
+
+
+}
+
+@keyframes pulse {
+to {
+    box-shadow: 0 0 0 18px rgba(0, 0, 0, 0.01);
+}
+
+}
+
+
+/*Nope-anim*/
+
+.nope-anim {
+width: 75px;
+height: 75px;
+border-radius: 50%;
+background: #000;
+margin: 100px auto 0;/*100px top ,auto gauche droite,0 bas*/
+cursor: pointer;
+
+}
+
+.nope-anim:hover {
+    animation: nope 0.5s forwards;/*forward reviens à ces valeurs  en début initials quand tu as finis ton animation*/
+}
+
+@keyframes nope {
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(-10px);/*il sera plus à gauche*/
+    }
+    40%{
+        transform: translateX(10px);/*il sera à droite*/
+    }
+    60%{
+        transform: translateX(-10px);/*il sera plus à gauche*/
+    }
+    80%{
+        transform: translateX(10px);/*il sera à droite*/
+    }
+    100%{
+        transform: translateX(0px);/*je reviens à 0*/
+    }
+}
+
+/*apparition*/
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: apparition 0.8s ease-out;/*ease-out veut dire lent vers la fin*/
+}
+
+@keyframes apparition {
+from { /*on va de */
+opacity: 0;
+transform: translateY(-100px);
+
+}
+to {/*jusqu'à*/
+    opacity: 1; /*on peut animer une aparition avec "opacity" mais pas avec "display none" et "visibility hidden"*/
+    transform: translateY(0px);
+}
+}
